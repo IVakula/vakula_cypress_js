@@ -1,8 +1,9 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
+  watchForFileChanges: false,
   e2e: {
-    defaultCommandTimeout: 2000,
-    specPattern: "**/*.cy.{js,jsx,ts,tsx}"
+    specPattern: '**/*.cy.{js,jsx,ts,tsx}',
+    baseUrl: 'https://qauto.forstudy.space/'
   },
 });
