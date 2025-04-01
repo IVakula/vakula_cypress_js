@@ -1,5 +1,5 @@
+const validCredentials = require('../../fixtures/validCredentials.json');
 export class RegistrationForm {
-
     selectors = {
         signUpButton: () => cy.contains('button', 'Sign up'),
         signUpName: () => cy.get('[id="signupName"]'),
@@ -63,7 +63,6 @@ export class RegistrationForm {
     };
 
     checkError(inputField, borderColor, message) {
-        //this.selectors.registrationForm().click();
         inputField.should('have.css', 'border-color', borderColor);
         this.selectors.invalidFeedback().should('have.text', message);
         this.selectors.registrationButton().should('be.disabled');
@@ -96,4 +95,9 @@ export class RegistrationForm {
     inputInvalidSignUpRepeatPassword(text) {
         this.#inputPassword(this.selectors.sigUpRepeatPassword(), text);
     };
+
+    generateEmail() {
+        const randomValue = Math.floor(Math.random() * 100000);
+        return randomValue + validCredentials.email;
+    }
 }

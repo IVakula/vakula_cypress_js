@@ -21,8 +21,7 @@ describe('My new tests', () => {
         registrationForm.checkAndClickSignUpButton();
         registrationForm.inputValidSignUpName(validCredentials.name, validCredentials.name);
         registrationForm.inputValidSignUpLastName(validCredentials.lastName, validCredentials.lastName);
-        const randomValue = Math.floor(Math.random() * 100000);
-        const email = randomValue + validCredentials.email;
+        const email = registrationForm.generateEmail();
         registrationForm.inputValidSignUpEmail(email, email);
         registrationForm.inputValidSignUpPassword(validCredentials.password, validCredentials.password);
         registrationForm.inputValidSignUpRepeatPassword(validCredentials.password, validCredentials.password);
@@ -122,8 +121,7 @@ describe('My new tests', () => {
             registrationForm.checkAndClickSignUpButton();
             registrationForm.inputValidSignUpName(validCredentials.name, validCredentials.name);
             registrationForm.inputValidSignUpLastName(validCredentials.lastName, validCredentials.lastName);
-            const randomValue = Math.floor(Math.random() * 100000);
-            const email = randomValue + validCredentials.email;
+            const email = registrationForm.generateEmail();
             registrationForm.inputValidSignUpEmail(email, email);
             registrationForm.inputInvalidSignUpPassword(invalidCredentials.passwordOneSymbol);
             registrationForm.registrationFormClick();
@@ -134,8 +132,7 @@ describe('My new tests', () => {
             registrationForm.checkAndClickSignUpButton();
             registrationForm.inputValidSignUpName(validCredentials.name, validCredentials.name);
             registrationForm.inputValidSignUpLastName(validCredentials.lastName, validCredentials.lastName);
-            const randomValue = Math.floor(Math.random() * 100000);
-            const email = randomValue + validCredentials.email;
+            const email = registrationForm.generateEmail();
             registrationForm.inputValidSignUpEmail(email, email);
             registrationForm.inputInvalidSignUpPassword(invalidCredentials.passwordManySymbols);
             registrationForm.registrationFormClick();
@@ -146,8 +143,7 @@ describe('My new tests', () => {
             registrationForm.checkAndClickSignUpButton();
             registrationForm.inputValidSignUpName(validCredentials.name, validCredentials.name);
             registrationForm.inputValidSignUpLastName(validCredentials.lastName, validCredentials.lastName);
-            const randomValue = Math.floor(Math.random() * 100000);
-            const email = randomValue + validCredentials.email;
+            const email = registrationForm.generateEmail();
             registrationForm.inputValidSignUpEmail(email, email);
             registrationForm.inputInvalidSignUpPassword(invalidCredentials.passwordOnlyCapitalSymbols);
             registrationForm.registrationFormClick();
@@ -158,8 +154,7 @@ describe('My new tests', () => {
             registrationForm.checkAndClickSignUpButton();
             registrationForm.inputValidSignUpName(validCredentials.name, validCredentials.name);
             registrationForm.inputValidSignUpLastName(validCredentials.lastName, validCredentials.lastName);
-            const randomValue = Math.floor(Math.random() * 100000);
-            const email = randomValue + validCredentials.email;
+            const email = registrationForm.generateEmail();
             registrationForm.inputValidSignUpEmail(email, email);
             registrationForm.inputInvalidSignUpPassword(invalidCredentials.passwordOnlyCharacters);
             registrationForm.registrationFormClick();
@@ -170,8 +165,7 @@ describe('My new tests', () => {
             registrationForm.checkAndClickSignUpButton();
             registrationForm.inputValidSignUpName(validCredentials.name, validCredentials.name);
             registrationForm.inputValidSignUpLastName(validCredentials.lastName, validCredentials.lastName);
-            const randomValue = Math.floor(Math.random() * 100000);
-            const email = randomValue + validCredentials.email;
+            const email = registrationForm.generateEmail();
             registrationForm.inputValidSignUpEmail(email, email);
             registrationForm.inputInvalidSignUpPassword(invalidCredentials.passwordWithoutCapitalSymbol);
             registrationForm.registrationFormClick();
@@ -182,8 +176,7 @@ describe('My new tests', () => {
             registrationForm.checkAndClickSignUpButton();
             registrationForm.inputValidSignUpName(validCredentials.name, validCredentials.name);
             registrationForm.inputValidSignUpLastName(validCredentials.lastName, validCredentials.lastName);
-            const randomValue = Math.floor(Math.random() * 100000);
-            const email = randomValue + validCredentials.email;
+            const email = registrationForm.generateEmail();
             registrationForm.inputValidSignUpEmail(email, email);
             registrationForm.checkAndClearField(registrationForm.selectors.signUpPassword());
             registrationForm.registrationFormClick();
@@ -196,8 +189,7 @@ describe('My new tests', () => {
             registrationForm.checkAndClickSignUpButton();
             registrationForm.inputValidSignUpName(validCredentials.name, validCredentials.name);
             registrationForm.inputValidSignUpLastName(validCredentials.lastName, validCredentials.lastName);
-            const randomValue = Math.floor(Math.random() * 100000);
-            const email = randomValue + validCredentials.email;
+            const email = registrationForm.generateEmail();
             registrationForm.inputValidSignUpEmail(email, email);
             registrationForm.inputValidSignUpPassword(validCredentials.password, validCredentials.password);
             registrationForm.inputInvalidSignUpRepeatPassword(invalidCredentials.reenterpasswordInvalid);
@@ -209,8 +201,7 @@ describe('My new tests', () => {
             registrationForm.checkAndClickSignUpButton();
             registrationForm.inputValidSignUpName(validCredentials.name, validCredentials.name);
             registrationForm.inputValidSignUpLastName(validCredentials.lastName, validCredentials.lastName);
-            const randomValue = Math.floor(Math.random() * 100000);
-            const email = randomValue + validCredentials.email;
+            const email = registrationForm.generateEmail();
             registrationForm.inputValidSignUpEmail(email, email);
             registrationForm.inputValidSignUpPassword(validCredentials.password, validCredentials.password);
             registrationForm.checkAndClearField(registrationForm.selectors.sigUpRepeatPassword());
