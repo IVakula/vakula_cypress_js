@@ -1,9 +1,9 @@
 import { RegistrationForm } from '../support/poms/RegistrationForm.js'
 const registrationForm = new RegistrationForm();
+const validCredentials = require('../fixtures/validCredentials.json');
+const invalidCredentials = require('../fixtures/invalidCredentials.json');
 
 describe('My new tests', () => {
-    const validCredentials = require('../fixtures/validCredentials.json');
-    const invalidCredentials = require('../fixtures/invalidCredentials.json');
     beforeEach(() => {
         cy.visit('', {
             auth: {

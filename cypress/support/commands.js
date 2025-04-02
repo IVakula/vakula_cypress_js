@@ -2,7 +2,7 @@
 Cypress.Commands.add('login', (email, password) => {
   cy.contains('button', 'Sign In').click();
   cy.get('form input[name="email"]').type(email);
-  cy.get('form input[name="password"]').type(password);
+  cy.get('form input[name="password"]').type(password,{ sensitive: true });
   cy.contains('button', 'Login').click()
 });
 
