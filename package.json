@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "cy:open": "npx cypress open",
+    "test": "cypress run --headless",
     "cy:open:test": "npx cypress open --env TEST_ENVIRONMENT=test",
     "cy:open:prod": "npx cypress open --env TEST_ENVIRONMENT=prod"
   },
